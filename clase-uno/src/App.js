@@ -1,13 +1,15 @@
 import "bootstrap/dist/css/bootstrap.css"
 import { Provider } from "react-redux";
-import AgregarTarea from './components/AgregarTarea';
+//import AgregarTarea from './components/AgregarTarea';
+import AgregarTarea from "./container/AgregarTarea";
 //import ListaTareas from './components/ListaTareas';
 import ListaTareas from "./container/ListaTareas";
 import theOnlySourceOfTruth from './store/store'
 
 function App() {
 
-  /* const tareas = [
+  /*  SE MUEVEN LAS TAREAS A EL STORE
+  const tareas = [
     { id: 1, nombre:"curso", done:false},
     { id: 2, nombre:"trabajar", done:false},
     { id: 3, nombre:"bañarse", done:false}
@@ -20,7 +22,7 @@ function App() {
       </header>
       <main>
         <ListaTareas/>
-        <AgregarTarea totalTareas={ListaTareas.length} />
+        <AgregarTarea/>
       </main>
     </Provider>
   );

@@ -1,4 +1,5 @@
 import { createStore } from "redux";
+import reducer from '../reducers/reducer'
 
 const tareas = [
   { id: 1, nombre:"curso (Store)", done:false},
@@ -6,4 +7,4 @@ const tareas = [
   { id: 3, nombre:"bañarse (Store)", done:false}
 ]
 
-export default createStore ((s,a) =>(s), tareas)
+export default createStore (reducer, tareas)
