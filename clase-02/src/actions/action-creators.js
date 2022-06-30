@@ -13,3 +13,10 @@ export function eliminarTarea(id){
     id: id,
   }
 }
+
+export function initTareas(){
+  return{
+    type: 'ACT_INIT_TAREAS',
+    payload: []
+  }
+}

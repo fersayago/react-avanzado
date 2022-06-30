@@ -17,7 +17,7 @@ const AgregarTarea = (props) => {
         <button
           className="btn btn-outline-primary"
           onClick={()=>{
-            props.addTarea(tarea);
+            (tarea.length > 0) && props.addTarea(tarea);
             setTarea("");
           }}
         >+</button>

@@ -1,5 +1,9 @@
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import reducer from '../reducers/reducer'
+import logMiddleware from "../middlewares/logMiddleware";
+import delayMiddleware from "../middlewares/delayMiddleware";
+import fetchMiddleware from "../middlewares/fetchMiddleware";
+import { initTareas } from "../actions/action-creators";
 
 const tareas = [
   { id: 1, nombre:"curso (Store)", done:false},
@@ -7,4 +11,12 @@ const tareas = [
   { id: 3, nombre:"bañarse (Store)", done:false}
 ]
 
-export default createStore (reducer, tareas)
+let store = createStore(
+  reducer,
+  tareas,
+  applyMiddleware(delayMiddleware, logMiddleware, fetchMiddleware)
+)
+
+store.dispatch(initTareas());
+
+export default store;

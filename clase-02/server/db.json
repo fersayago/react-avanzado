@@ -1,0 +1,29 @@
+{
+  "tareas": [
+    {
+      "id": 1,
+      "nombre": "curso (server)",
+      "done": false
+    },
+    {
+      "id": 2,
+      "nombre": "trabajar (server)",
+      "done": false
+    },
+    {
+      "id": 3,
+      "nombre": "bañarse (server)",
+      "done": false
+    },
+    {
+      "id": 4,
+      "nombre": "daily (server)",
+      "done": false
+    },
+    {
+      "id": 5,
+      "nombre": "daily (server)",
+      "done": false
+    }
+  ]
+}
