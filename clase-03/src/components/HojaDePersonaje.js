@@ -11,7 +11,13 @@ const HojaDePersonaje = () => {
   return (
     <Card>
       <CardActionArea>
-      <CardHeader title={heroe.name} />
+      <CardHeader title={
+        heroe.alive ?
+        heroe.name :
+        heroe.name + " (Muerto)"
+      }
+      style={{color: heroe.alive ? 'green' : 'red'}} 
+      />
       <CardContent>
         <Typography>{heroe.race} - {heroe.class}</Typography>
         <Typography variant='body1'>LV : {heroe.level}</Typography>
