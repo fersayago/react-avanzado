@@ -11,7 +11,7 @@ const PropsConsumer = (props) => {
         textAlign: props.style.textAlign
       }}
     >
-      Soy un consumidor de props
+      Soy un consumidor del contexto indirectamente por props
     </div>
   )
 }

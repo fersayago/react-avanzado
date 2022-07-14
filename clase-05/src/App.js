@@ -8,6 +8,7 @@ import HookContextConsumer from './components/HookContextConsumer';
 import StyleContext from './context/StyleContext';
 import ContextConsumer from './components/ContextConsumer';
 import ContextWrapper from './containers/ContextWrapper';
+import ClassContextConsumer from './components/ClassContextConsumer';
 
 const RedDummy = Red(DummyComponent)
 
@@ -57,6 +58,10 @@ function App() {
 
       {/* Context Wrapper con Props Consumer */}
       <ContextWrapper />
+      <hr />
+
+      {/* Class Context Consumer */}
+      <ClassContextConsumer />
     </div>
   );
 }
